@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { createDOM, render } from './react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const vdom = {
+  tag: 'p',
+  props: {},
+  children: [
+    {
+      tag: 'h1',
+      props: {
+
+      },
+      children: ["React 만들기"],
+    },
+    {
+      tag: 'ul',
+      props: {
+
+      },
+      children: [
+        {
+          tag: 'li',
+          props: {
+            style: "color:red",
+          },
+          children: ["첫 번째 아이템"]
+        },
+        {
+          tag: 'li',
+          props: { style: "color:green", },
+          children: ["두 번째 아이템"]
+        },
+        {
+          tag: 'li',
+          props: {
+            style: "color:blue",
+          },
+          children: ["세 번째 아이템"]
+        },
+      ]
+    }
+  ],
 }
 
-export default App;
+render(vdom,document.querySelector('#root'))
