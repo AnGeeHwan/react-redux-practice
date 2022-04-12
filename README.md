@@ -14,3 +14,9 @@
 - output 출력은 여러가지 정보들이 필요하여 객체로
 - module
 - plugins
+
+## Babel
+
+- bundle.js -React is not defined 에러 발생 이유
+- 변환시에 React 기능을 사용하기 때문에 상단에
+- /_ @jsx createElement _/ 예시처럼 추가해주면 정상동작한다.

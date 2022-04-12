@@ -1,44 +1,15 @@
-import { createDOM, render } from './react'
+/* @jsx createElement */
+import { createDOM, createElement, render } from './react'
 
-const vdom = {
-  tag: 'p',
-  props: {},
-  children: [
-    {
-      tag: 'h1',
-      props: {
+const vdom = <p>
+  <h1>React 만들기</h1>
+  <ul>
+    <li style="color:red">첫 번째 아이템</li>
+    <li style="color:green">두 번째 아이템</li>
+    <li style="color:blue">세 번째 아이템</li>
+  </ul>
+</p>
 
-      },
-      children: ["React 만들기"],
-    },
-    {
-      tag: 'ul',
-      props: {
+console.log(vdom)
 
-      },
-      children: [
-        {
-          tag: 'li',
-          props: {
-            style: "color:red",
-          },
-          children: ["첫 번째 아이템"]
-        },
-        {
-          tag: 'li',
-          props: { style: "color:green", },
-          children: ["두 번째 아이템"]
-        },
-        {
-          tag: 'li',
-          props: {
-            style: "color:blue",
-          },
-          children: ["세 번째 아이템"]
-        },
-      ]
-    }
-  ],
-}
-
-render(vdom,document.querySelector('#root'))
+render(vdom, document.querySelector('#root'))

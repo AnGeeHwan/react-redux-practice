@@ -29,7 +29,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'setup webpack & babel',
-      template: './src/index.html',
+      template: './index.html',
     })
   ],
 
